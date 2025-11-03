@@ -24,6 +24,7 @@ Fly.io と PostgreSQL を使用し、ブラウザ上で動作します。
 https://truck-01.fly.dev
 
 ## ローカルでの実行
-<img width="1121" height="751" alt="スクリーンショット 2025-11-03 23 13 49" src="https://github.com/user-attachments/assets/cd2a79c7-92bf-4a4c-aaf3-5c1f1c17c0c2" />
-<img width="1352" height="707" alt="スクリーンショット 2025-11-03 23 12 51" src="https://github.com/user-attachments/assets/924f12ee-dbf5-4754-a91e-5641ac545429" />
-<img width="1319" height="748" alt="スクリーンショット 2025-11-03 23 22 29" src="https://github.com/user-attachments/assets/4822e7ee-f464-4d24-bc79-00290c215a76" />
+
+### ログイン画面<img width="1121" height="751" alt="スクリーンショット 2025-11-03 23 13 49" src="https://github.com/user-attachments/assets/cd2a79c7-92bf-4a4c-aaf3-5c1f1c17c0c2" />
+### 会社側ホーム画面img width="1352" height="707" alt="スクリーンショット 2025-11-03 23 12 51" src="https://github.com/user-attachments/assets/924f12ee-dbf5-4754-a91e-5641ac545429" />
+### チャット画面img width="1319" height="748" alt="スクリーンショット 2025-11-03 23 22 29" src="https://github.com/user-attachments/assets/4822e7ee-f464-4d24-bc79-00290c215a76" />
