@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <title>ドライバー一覧</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+      padding: 40px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .box {
+      width: 100%;
+      max-width: 600px;
+      background: #fff;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,.15);
+    }
+
+    h1 {
+      color: #1565c0;
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: 700;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+      margin-bottom: 20px;
+    }
+
+    th {
+      background: #0066cc;
+      color: white;
+      padding: 10px;
+      text-align: left;
+    }
+
+    td {
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .nav-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back-btn {
+      padding: 10px 16px;
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      width: 48%;
+      text-align: center;
+    }
+    .back-btn:hover { background:#111; }
+
+    .page-box {
+      display: flex;
+      gap: 8px;
+      justify-content: flex-end;
+      width: 48%;
+    }
+
+    .page-btn {
+      padding: 10px 14px;
+      background: #0066cc;
+      color: white;
+      border-radius: 6px;
+      font-size: 15px;
+      cursor: pointer;
+      border: none;
+    }
+    .page-btn:hover { background:#004c99; }
+
+    .page-btn.active {
+      background: #003d7a;
+    }
+
+  </style>
+</head>
+<body>
+
+<div class="box">
+  <h1>ドライバー一覧</h1>
+
+  <table id="driverTable">
+    <thead>
+      <tr>
+        <th>名前</th>
+        <th>携帯番号</th>
+        <th>住所</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <div class="nav-row">
+    <!-- 戻るボタン（半分サイズ） -->
+    <button class="back-btn" onclick="location.href='company_home.html'">← 戻る</button>
+
+    <!-- ページ番号 -->
+    <div class="page-box">
+      <button class="page-btn active">1</button>
+      <button class="page-btn" onclick="location.href='driver_list02.html'">2</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+fetch('/api/drivers/detail')
+  .then(res => res.json())
+  .then(data => {
+    const tbody = document.querySelector('#driverTable tbody');
+
+    // ✅ 1ページ目 → 先頭10件だけ
+    const pageData = data.slice(0, 10);
+
+    pageData.forEach(d => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${d.name}</td>
+        <td>${d.phone ?? ''}</td>
+        <td>${d.address ?? ''}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+  })
+  .catch(err => {
+    console.error(err);
+    alert("データ取得エラー");
+  });
+</script>
+
+</body>
+</html>
