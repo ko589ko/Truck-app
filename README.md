@@ -26,4 +26,4 @@ https://truck-01.fly.dev
 ## ローカルでの実行
 <img width="1121" height="751" alt="スクリーンショット 2025-11-03 23 13 49" src="https://github.com/user-attachments/assets/cd2a79c7-92bf-4a4c-aaf3-5c1f1c17c0c2" />
 <img width="1352" height="707" alt="スクリーンショット 2025-11-03 23 12 51" src="https://github.com/user-attachments/assets/924f12ee-dbf5-4754-a91e-5641ac545429" />
-<img width="824" height="697" alt="スクリーンショット 2025-10-29 18 03 19" src="https://github.com/user-attachments/assets/d59861ef-8c5b-470f-8885-3e639f4495fd" />
+<img width="1319" height="748" alt="スクリーンショット 2025-11-03 23 22 29" src="https://github.com/user-attachments/assets/4822e7ee-f464-4d24-bc79-00290c215a76" />
